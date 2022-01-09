@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		D4FF7B9E278AA84C005DA9EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7B9D278AA84C005DA9EA /* AppDelegate.swift */; };
 		D4FF7BA0278AA84C005DA9EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7B9F278AA84C005DA9EA /* SceneDelegate.swift */; };
-		D4FF7BA2278AA84C005DA9EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BA1278AA84C005DA9EA /* ViewController.swift */; };
-		D4FF7BA5278AA84C005DA9EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FF7BA3278AA84C005DA9EA /* Main.storyboard */; };
 		D4FF7BA7278AA84C005DA9EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FF7BA6278AA84C005DA9EA /* Assets.xcassets */; };
 		D4FF7BAA278AA84C005DA9EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FF7BA8278AA84C005DA9EA /* LaunchScreen.storyboard */; };
+		D4FF7BB3278AA975005DA9EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D4FF7BB2278AA975005DA9EA /* Alamofire */; };
+		D4FF7BB6278AA982005DA9EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D4FF7BB5278AA982005DA9EA /* SnapKit */; };
+		D4FF7BB9278AA98E005DA9EA /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = D4FF7BB8278AA98E005DA9EA /* FSCalendar */; };
+		D4FF7BBC278AAA15005DA9EA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BBB278AAA15005DA9EA /* LoginVC.swift */; };
+		D4FF7BBE278AAF0D005DA9EA /* SANGJU Gotgam.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4FF7BBD278AAF0D005DA9EA /* SANGJU Gotgam.otf */; };
+		D4FF7BC2278AB62F005DA9EA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BC1278AB62F005DA9EA /* MainVC.swift */; };
+		D4FF7BC4278ACAE6005DA9EA /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BC3278ACAE6005DA9EA /* CalendarCell.swift */; };
+		D4FF7BC6278AD854005DA9EA /* DiaryWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D4FF7B9A278AA84C005DA9EA /* haruDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haruDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FF7B9D278AA84C005DA9EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4FF7B9F278AA84C005DA9EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D4FF7BA1278AA84C005DA9EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D4FF7BA4278AA84C005DA9EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4FF7BA6278AA84C005DA9EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4FF7BA9278AA84C005DA9EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4FF7BAB278AA84C005DA9EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4FF7BBB278AAA15005DA9EA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		D4FF7BBD278AAF0D005DA9EA /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SANGJU Gotgam.otf"; path = "../../../Downloads/Mac용+상주시+전용서체+-+OTF/SANGJU Gotgam.otf"; sourceTree = "<group>"; };
+		D4FF7BC0278AAF17005DA9EA /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SANGJU Gotgam.otf"; sourceTree = "<group>"; };
+		D4FF7BC1278AB62F005DA9EA /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		D4FF7BC3278ACAE6005DA9EA /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryWrite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FF7BB3278AA975005DA9EA /* Alamofire in Frameworks */,
+				D4FF7BB9278AA98E005DA9EA /* FSCalendar in Frameworks */,
+				D4FF7BB6278AA982005DA9EA /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +71,33 @@
 			children = (
 				D4FF7B9D278AA84C005DA9EA /* AppDelegate.swift */,
 				D4FF7B9F278AA84C005DA9EA /* SceneDelegate.swift */,
-				D4FF7BA1278AA84C005DA9EA /* ViewController.swift */,
-				D4FF7BA3278AA84C005DA9EA /* Main.storyboard */,
 				D4FF7BA6278AA84C005DA9EA /* Assets.xcassets */,
 				D4FF7BA8278AA84C005DA9EA /* LaunchScreen.storyboard */,
+				D4FF7BBD278AAF0D005DA9EA /* SANGJU Gotgam.otf */,
 				D4FF7BAB278AA84C005DA9EA /* Info.plist */,
+				D4FF7BBF278AAF13005DA9EA /* font */,
+				D4FF7BBA278AA9D4005DA9EA /* VC */,
 			);
 			path = haruDiary;
+			sourceTree = "<group>";
+		};
+		D4FF7BBA278AA9D4005DA9EA /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF7BBB278AAA15005DA9EA /* LoginVC.swift */,
+				D4FF7BC1278AB62F005DA9EA /* MainVC.swift */,
+				D4FF7BC3278ACAE6005DA9EA /* CalendarCell.swift */,
+				D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		D4FF7BBF278AAF13005DA9EA /* font */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF7BC0278AAF17005DA9EA /* SANGJU Gotgam.otf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +116,11 @@
 			dependencies = (
 			);
 			name = haruDiary;
+			packageProductDependencies = (
+				D4FF7BB2278AA975005DA9EA /* Alamofire */,
+				D4FF7BB5278AA982005DA9EA /* SnapKit */,
+				D4FF7BB8278AA98E005DA9EA /* FSCalendar */,
+			);
 			productName = haruDiary;
 			productReference = D4FF7B9A278AA84C005DA9EA /* haruDiary.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +149,11 @@
 				Base,
 			);
 			mainGroup = D4FF7B91278AA84C005DA9EA;
+			packageReferences = (
+				D4FF7BB1278AA975005DA9EA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D4FF7BB4278AA982005DA9EA /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D4FF7BB7278AA98E005DA9EA /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = D4FF7B9B278AA84C005DA9EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FF7BAA278AA84C005DA9EA /* LaunchScreen.storyboard in Resources */,
+				D4FF7BBE278AAF0D005DA9EA /* SANGJU Gotgam.otf in Resources */,
 				D4FF7BA7278AA84C005DA9EA /* Assets.xcassets in Resources */,
-				D4FF7BA5278AA84C005DA9EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +181,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4FF7BA2278AA84C005DA9EA /* ViewController.swift in Sources */,
 				D4FF7B9E278AA84C005DA9EA /* AppDelegate.swift in Sources */,
+				D4FF7BC2278AB62F005DA9EA /* MainVC.swift in Sources */,
 				D4FF7BA0278AA84C005DA9EA /* SceneDelegate.swift in Sources */,
+				D4FF7BC6278AD854005DA9EA /* DiaryWrite.swift in Sources */,
+				D4FF7BBC278AAA15005DA9EA /* LoginVC.swift in Sources */,
+				D4FF7BC4278ACAE6005DA9EA /* CalendarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D4FF7BA3278AA84C005DA9EA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4FF7BA4278AA84C005DA9EA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D4FF7BA8278AA84C005DA9EA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +332,6 @@
 				INFOPLIST_FILE = haruDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +359,6 @@
 				INFOPLIST_FILE = haruDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,6 +396,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4FF7BB1278AA975005DA9EA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D4FF7BB4278AA982005DA9EA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		D4FF7BB7278AA98E005DA9EA /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4FF7BB2278AA975005DA9EA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4FF7BB1278AA975005DA9EA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D4FF7BB5278AA982005DA9EA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4FF7BB4278AA982005DA9EA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D4FF7BB8278AA98E005DA9EA /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4FF7BB7278AA98E005DA9EA /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4FF7B92278AA84C005DA9EA /* Project object */;
 }
