@@ -7,8 +7,9 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
-class DiaryWrite: UIViewController {
+class DiaryWrite: UIViewController{
     
     var date = Date()
     let weatherView = UIView()
@@ -116,8 +117,29 @@ class DiaryWrite: UIViewController {
         return tmp
     }()
     let textView = UITextView()
-    
-    
+    let saveBtn: UIView = {
+        let btn = UIView()
+        btn.backgroundColor = .gray
+        let txt = UILabel()
+        txt.text = "이미지대체예정"
+        txt.textAlignment = .center
+        btn.addSubview(txt);
+        txt.snp.makeConstraints{
+            $0.centerX.centerY.equalToSuperview()
+            $0.width.equalTo(150)
+            $0.height.equalTo(40)
+        }
+        return btn;
+    }()
+    @objc private func tapSaveBtn(_ sender: Any){
+        let emotionvc = EmotionContentVC()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy년 M월 dd일 당신의 그날"
+        print(formatter.string(from: date))
+        emotionvc.titlestr = formatter.string(from: date)
+        emotionvc.date = date
+        self.navigationController?.pushViewController(emotionvc, animated: false)
+    }
     
     
     override func viewDidLoad() {
@@ -212,12 +234,39 @@ class DiaryWrite: UIViewController {
             $0.height.equalTo(view.bounds.height * 0.6)
         }
         
+        view.addSubview(saveBtn)
+        let g = UITapGestureRecognizer(target: self, action: #selector(tapSaveBtn(_:)))
+        saveBtn.addGestureRecognizer(g);
+        saveBtn.snp.makeConstraints{
+            $0.bottom.equalToSuperview().inset(50)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(200)
+            $0.height.equalTo(80)
+        }
         
         
         
     }
 }
 
-extension DiaryWrite: UITextViewDelegate {
+extension UINavigationController {
+    
+    func popViewController(animated: Bool, completion:@escaping (()->())) -> UIViewController? {
+        CATransaction.setCompletionBlock(completion)
+        CATransaction.begin()
+        let poppedViewController = self.popViewController(animated: animated)
+        CATransaction.commit()
+        return poppedViewController
+    }
+    
+    func pushViewController(_ viewController: UIViewController, animated: Bool, completion:@escaping (()->())) {
+        CATransaction.setCompletionBlock(completion)
+        CATransaction.begin()
+        self.pushViewController(viewController, animated: animated)
+        CATransaction.commit()
+    }
+}
+
+extension DiaryWrite: UITextViewDelegate{
     
 }

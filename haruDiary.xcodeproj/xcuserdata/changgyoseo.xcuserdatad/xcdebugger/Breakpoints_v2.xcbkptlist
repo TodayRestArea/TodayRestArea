@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "29B7CAD1-92F8-41BB-836E-7FFCA6FD3E88"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8BDA9AD4-F27F-4F2A-BA6D-66E2D98A3EC4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "haruDiary/VC/EmotionContentVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "movieCollectionView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "8BDA9AD4-F27F-4F2A-BA6D-66E2D98A3EC4 - 42e74c3fc4316cd9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UICollectionView in variable initialization expression of haruDiary.EmotionContentVC.movieCollectionView : __C.UICollectionView"
+                  moduleName = "haruDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/changgyoseo/Projects/haruDiary/haruDiary/VC/EmotionContentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "8BDA9AD4-F27F-4F2A-BA6D-66E2D98A3EC4 - 9ebd06872dcf285e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "haruDiary.EmotionContentVC.movieCollectionView.getter : __C.UICollectionView"
+                  moduleName = "haruDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/changgyoseo/Projects/haruDiary/haruDiary/VC/EmotionContentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "8BDA9AD4-F27F-4F2A-BA6D-66E2D98A3EC4 - 1985699f0dc4ae16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "haruDiary.EmotionContentVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; haruDiary.EmotionContentVC"
+                  moduleName = "haruDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/changgyoseo/Projects/haruDiary/haruDiary/VC/EmotionContentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "8BDA9AD4-F27F-4F2A-BA6D-66E2D98A3EC4 - be3cc065f8152093"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "haruDiary.EmotionContentVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;haruDiary.EmotionContentVC&gt;"
+                  moduleName = "haruDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/changgyoseo/Projects/haruDiary/haruDiary/VC/EmotionContentVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "312">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

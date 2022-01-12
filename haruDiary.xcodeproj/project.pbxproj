@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4C5FB3F278EC98700A1B088 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5FB3E278EC98700A1B088 /* ContentCell.swift */; };
+		D4E7B91C278C53A700B209EF /* EmotionContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7B91B278C53A700B209EF /* EmotionContentVC.swift */; };
 		D4FF7B9E278AA84C005DA9EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7B9D278AA84C005DA9EA /* AppDelegate.swift */; };
 		D4FF7BA0278AA84C005DA9EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7B9F278AA84C005DA9EA /* SceneDelegate.swift */; };
 		D4FF7BA7278AA84C005DA9EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FF7BA6278AA84C005DA9EA /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4C5FB3E278EC98700A1B088 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		D4E7B91B278C53A700B209EF /* EmotionContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionContentVC.swift; sourceTree = "<group>"; };
 		D4FF7B9A278AA84C005DA9EA /* haruDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haruDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FF7B9D278AA84C005DA9EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4FF7B9F278AA84C005DA9EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				D4FF7BC1278AB62F005DA9EA /* MainVC.swift */,
 				D4FF7BC3278ACAE6005DA9EA /* CalendarCell.swift */,
 				D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */,
+				D4E7B91B278C53A700B209EF /* EmotionContentVC.swift */,
+				D4C5FB3E278EC98700A1B088 /* ContentCell.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -185,8 +191,10 @@
 				D4FF7BC2278AB62F005DA9EA /* MainVC.swift in Sources */,
 				D4FF7BA0278AA84C005DA9EA /* SceneDelegate.swift in Sources */,
 				D4FF7BC6278AD854005DA9EA /* DiaryWrite.swift in Sources */,
+				D4E7B91C278C53A700B209EF /* EmotionContentVC.swift in Sources */,
 				D4FF7BBC278AAA15005DA9EA /* LoginVC.swift in Sources */,
 				D4FF7BC4278ACAE6005DA9EA /* CalendarCell.swift in Sources */,
+				D4C5FB3F278EC98700A1B088 /* ContentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
