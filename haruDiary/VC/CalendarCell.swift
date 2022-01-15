@@ -8,9 +8,14 @@ class CalendarCell: FSCalendarCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-  
+        displaySetting()
+    }
+    
+    private func displaySetting(){
+        
         
     }
+    
     
     
 }

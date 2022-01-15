@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97E06727CB17097F04269CBD /* Pods_haruDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49405C78B50538E79B14763A /* Pods_haruDiary.framework */; };
+		D493F3272793327300A130D2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D493F3262793327300A130D2 /* APIConstants.swift */; };
+		D4BE68C5279344FB001910DC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68C4279344FB001910DC /* LoginService.swift */; };
+		D4BE68C927936026001910DC /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68C827936026001910DC /* MainService.swift */; };
+		D4BE68CB279360A8001910DC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68CA279360A8001910DC /* LoginModel.swift */; };
 		D4C5FB3F278EC98700A1B088 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5FB3E278EC98700A1B088 /* ContentCell.swift */; };
 		D4E7B91C278C53A700B209EF /* EmotionContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7B91B278C53A700B209EF /* EmotionContentVC.swift */; };
 		D4FF7B9E278AA84C005DA9EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7B9D278AA84C005DA9EA /* AppDelegate.swift */; };
@@ -17,13 +22,20 @@
 		D4FF7BB6278AA982005DA9EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D4FF7BB5278AA982005DA9EA /* SnapKit */; };
 		D4FF7BB9278AA98E005DA9EA /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = D4FF7BB8278AA98E005DA9EA /* FSCalendar */; };
 		D4FF7BBC278AAA15005DA9EA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BBB278AAA15005DA9EA /* LoginVC.swift */; };
-		D4FF7BBE278AAF0D005DA9EA /* SANGJU Gotgam.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4FF7BBD278AAF0D005DA9EA /* SANGJU Gotgam.otf */; };
 		D4FF7BC2278AB62F005DA9EA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BC1278AB62F005DA9EA /* MainVC.swift */; };
 		D4FF7BC4278ACAE6005DA9EA /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BC3278ACAE6005DA9EA /* CalendarCell.swift */; };
 		D4FF7BC6278AD854005DA9EA /* DiaryWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		247388134D7629677E717359 /* Pods-haruDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haruDiary.debug.xcconfig"; path = "Target Support Files/Pods-haruDiary/Pods-haruDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		49405C78B50538E79B14763A /* Pods_haruDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_haruDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7D5470F4CE3AAE0C5ABFE89 /* Pods-haruDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haruDiary.release.xcconfig"; path = "Target Support Files/Pods-haruDiary/Pods-haruDiary.release.xcconfig"; sourceTree = "<group>"; };
+		D493F3262793327300A130D2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		D493F3292793329300A130D2 /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SANGJU Gotgam.otf"; path = "../../../../Downloads/Mac용+상주시+전용서체+-+OTF/SANGJU Gotgam.otf"; sourceTree = "<group>"; };
+		D4BE68C4279344FB001910DC /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		D4BE68C827936026001910DC /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		D4BE68CA279360A8001910DC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		D4C5FB3E278EC98700A1B088 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		D4E7B91B278C53A700B209EF /* EmotionContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionContentVC.swift; sourceTree = "<group>"; };
 		D4FF7B9A278AA84C005DA9EA /* haruDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haruDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +45,6 @@
 		D4FF7BA9278AA84C005DA9EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4FF7BAB278AA84C005DA9EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4FF7BBB278AAA15005DA9EA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		D4FF7BBD278AAF0D005DA9EA /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SANGJU Gotgam.otf"; path = "../../../Downloads/Mac용+상주시+전용서체+-+OTF/SANGJU Gotgam.otf"; sourceTree = "<group>"; };
 		D4FF7BC0278AAF17005DA9EA /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SANGJU Gotgam.otf"; sourceTree = "<group>"; };
 		D4FF7BC1278AB62F005DA9EA /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D4FF7BC3278ACAE6005DA9EA /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
@@ -48,17 +59,64 @@
 				D4FF7BB3278AA975005DA9EA /* Alamofire in Frameworks */,
 				D4FF7BB9278AA98E005DA9EA /* FSCalendar in Frameworks */,
 				D4FF7BB6278AA982005DA9EA /* SnapKit in Frameworks */,
+				97E06727CB17097F04269CBD /* Pods_haruDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0E72ECEE02496A6F258B91E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				247388134D7629677E717359 /* Pods-haruDiary.debug.xcconfig */,
+				C7D5470F4CE3AAE0C5ABFE89 /* Pods-haruDiary.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B99CA7C3454D4C3DD2D09FA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49405C78B50538E79B14763A /* Pods_haruDiary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D493F3282793327900A130D2 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				D493F3262793327300A130D2 /* APIConstants.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		D4BE68C627935E96001910DC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF7BBB278AAA15005DA9EA /* LoginVC.swift */,
+				D4BE68C4279344FB001910DC /* LoginService.swift */,
+				D4BE68CA279360A8001910DC /* LoginModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D4BE68C72793600D001910DC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF7BC1278AB62F005DA9EA /* MainVC.swift */,
+				D4BE68C827936026001910DC /* MainService.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		D4FF7B91278AA84C005DA9EA = {
 			isa = PBXGroup;
 			children = (
 				D4FF7B9C278AA84C005DA9EA /* haruDiary */,
 				D4FF7B9B278AA84C005DA9EA /* Products */,
+				B0E72ECEE02496A6F258B91E /* Pods */,
+				B99CA7C3454D4C3DD2D09FA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,10 +135,10 @@
 				D4FF7B9F278AA84C005DA9EA /* SceneDelegate.swift */,
 				D4FF7BA6278AA84C005DA9EA /* Assets.xcassets */,
 				D4FF7BA8278AA84C005DA9EA /* LaunchScreen.storyboard */,
-				D4FF7BBD278AAF0D005DA9EA /* SANGJU Gotgam.otf */,
 				D4FF7BAB278AA84C005DA9EA /* Info.plist */,
 				D4FF7BBF278AAF13005DA9EA /* font */,
 				D4FF7BBA278AA9D4005DA9EA /* VC */,
+				D493F3282793327900A130D2 /* network */,
 			);
 			path = haruDiary;
 			sourceTree = "<group>";
@@ -88,8 +146,8 @@
 		D4FF7BBA278AA9D4005DA9EA /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				D4FF7BBB278AAA15005DA9EA /* LoginVC.swift */,
-				D4FF7BC1278AB62F005DA9EA /* MainVC.swift */,
+				D4BE68C627935E96001910DC /* Login */,
+				D4BE68C72793600D001910DC /* Main */,
 				D4FF7BC3278ACAE6005DA9EA /* CalendarCell.swift */,
 				D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */,
 				D4E7B91B278C53A700B209EF /* EmotionContentVC.swift */,
@@ -101,6 +159,7 @@
 		D4FF7BBF278AAF13005DA9EA /* font */ = {
 			isa = PBXGroup;
 			children = (
+				D493F3292793329300A130D2 /* SANGJU Gotgam.otf */,
 				D4FF7BC0278AAF17005DA9EA /* SANGJU Gotgam.otf */,
 			);
 			path = font;
@@ -113,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4FF7BAE278AA84C005DA9EA /* Build configuration list for PBXNativeTarget "haruDiary" */;
 			buildPhases = (
+				67E63A05AE2E1D65B17CA42E /* [CP] Check Pods Manifest.lock */,
 				D4FF7B96278AA84C005DA9EA /* Sources */,
 				D4FF7B97278AA84C005DA9EA /* Frameworks */,
 				D4FF7B98278AA84C005DA9EA /* Resources */,
+				6A85B9689AB13D6ABEB8096A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,12 +236,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FF7BAA278AA84C005DA9EA /* LaunchScreen.storyboard in Resources */,
-				D4FF7BBE278AAF0D005DA9EA /* SANGJU Gotgam.otf in Resources */,
 				D4FF7BA7278AA84C005DA9EA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67E63A05AE2E1D65B17CA42E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-haruDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A85B9689AB13D6ABEB8096A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-haruDiary/Pods-haruDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-haruDiary/Pods-haruDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-haruDiary/Pods-haruDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4FF7B96278AA84C005DA9EA /* Sources */ = {
@@ -188,13 +290,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FF7B9E278AA84C005DA9EA /* AppDelegate.swift in Sources */,
+				D4BE68CB279360A8001910DC /* LoginModel.swift in Sources */,
+				D493F3272793327300A130D2 /* APIConstants.swift in Sources */,
 				D4FF7BC2278AB62F005DA9EA /* MainVC.swift in Sources */,
 				D4FF7BA0278AA84C005DA9EA /* SceneDelegate.swift in Sources */,
 				D4FF7BC6278AD854005DA9EA /* DiaryWrite.swift in Sources */,
 				D4E7B91C278C53A700B209EF /* EmotionContentVC.swift in Sources */,
 				D4FF7BBC278AAA15005DA9EA /* LoginVC.swift in Sources */,
 				D4FF7BC4278ACAE6005DA9EA /* CalendarCell.swift in Sources */,
+				D4BE68C927936026001910DC /* MainService.swift in Sources */,
 				D4C5FB3F278EC98700A1B088 /* ContentCell.swift in Sources */,
+				D4BE68C5279344FB001910DC /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +436,7 @@
 		};
 		D4FF7BAF278AA84C005DA9EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 247388134D7629677E717359 /* Pods-haruDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -357,6 +464,7 @@
 		};
 		D4FF7BB0278AA84C005DA9EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7D5470F4CE3AAE0C5ABFE89 /* Pods-haruDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

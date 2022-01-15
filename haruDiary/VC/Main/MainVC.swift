@@ -2,8 +2,13 @@
 import UIKit
 import SnapKit
 import FSCalendar
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class MainVC: UIViewController {
+    
+    var clickedDate: Date?
     
     let logo: UIView = {
         let titleView: UILabel = {
@@ -52,12 +57,41 @@ class MainVC: UIViewController {
         tmp.calendarWeekdayView.weekdayLabels[6].text = "토"
         return tmp
     }()
+    let addView: UIView = {
+        let temp = UIView()
+        let plusImageView = UIImageView(image: UIImage(systemName: "plus"))
+        temp.addSubview(plusImageView)
+        plusImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(8)
+        }
+        return temp
+    }()
     
+    @objc private func clickedAddView(_ sender: Any){
+        let nextVC = DiaryWrite()
+        
+        guard let clickedDate = clickedDate else {
+            print("선택을 하셔야합니다 ㄱㅅㄲ야")
+            return
+        }
+        if(clickedDate.compare(Date()) == .orderedDescending){
+            print(clickedDate)
+            print(Date())
+            print("선택이 안됩니다 ㄱㅅㄲ야")
+        }else{
+            print(clickedDate)
+            print(Date())
+            print("선택")
+            nextVC.date = clickedDate
+            self.navigationController?.pushViewController(nextVC, animated: false)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         displaySetting()
         calendarSetting()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -65,24 +99,31 @@ class MainVC: UIViewController {
     }
     
     
-    
-    
     private func displaySetting(){
-        let bounds = self.navigationController!.navigationBar.bounds
-        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height+50)
+        
         let barLogo = UIBarButtonItem(customView: logo)
         self.navigationItem.leftBarButtonItem = barLogo
+        view.addSubview(addView)
+        addView.snp.makeConstraints{
+            $0.trailing.equalToSuperview().inset(24)
+            $0.width.height.equalTo(64)
+            $0.bottom.equalToSuperview().inset(48)
+        }
+        let g = UITapGestureRecognizer(target: self, action: #selector(clickedAddView(_:)))
+        addView.addGestureRecognizer(g)
+        
+        
     }
     private func calendarSetting(){
         calendar.delegate = self
         calendar.dataSource = self
-        calendar.appearance.eventSelectionColor = .clear
-        calendar.appearance.eventDefaultColor = .clear
         calendar.appearance.headerTitleFont = UIFont(name: "SANGJU-Gotgam", size: 25)
         calendar.appearance.headerTitleColor = .black
         calendar.appearance.titleTodayColor = .black
         calendar.appearance.headerDateFormat = "M 월"
         calendar.appearance.weekdayTextColor = .black
+        calendar.appearance.eventSelectionColor = .blue
+        calendar.appearance.eventDefaultColor = .clear
         calendar.appearance.todayColor = .clear
         calendar.appearance.titleSelectionColor = .black
         calendar.appearance.weekdayFont = UIFont(name: "SANGJU-Gotgam", size: 14)
@@ -91,7 +132,7 @@ class MainVC: UIViewController {
         calendar.snp.makeConstraints{
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(50)
             $0.leading.trailing.equalTo(view.safeAreaInsets).inset(12)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(30)
+            $0.bottom.equalTo(addView.snp.top).offset(12)
         }
     }
 }
@@ -103,15 +144,15 @@ extension MainVC: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAp
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        let tmp = DiaryWrite()
-        tmp.date = date
-        self.navigationController?.pushViewController(tmp, animated: false)
-        displaySetting()
-        }
+       
+        
+        print(date)
+        clickedDate = date
+    }
     
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillSelectionColorFor date: Date) -> UIColor? {
-        return .clear
+        return .gray
     }
     
     
