@@ -14,14 +14,17 @@ struct APIConstants {
 
     static let applicationJSON = "application/json"
     static let formEncoded = "application/x-www-form-urlencoded"
-
-
     static let jwtToken = KeyChain.load(key: "token")
     
+    
+    static let diarywirte = "diarys"
+    
+    
+    static let showDiaryMonyh = "diarys/"
+    static let getDetailDiary = "diarys/details/"
     // Base URL
-    static let baseURL = "3.37.243.45"
-   
-    static let loginURL = baseURL + "/auth/user"
+    static let baseURL = "http://3.37.243.45:8080/"
+    static let loginURL = baseURL + "oauth/kakao"
 }
 
 enum NetworkResult<T> {

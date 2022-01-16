@@ -60,12 +60,10 @@ class LoginVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        if KeyChain.load(key: "token") != nil {
-//            print("222222222222q22")
-//            let tmp = MainVC()
-//            tmp.modalPresentationStyle = .fullScreen
-//            self.present(tmp, animated: false, completion: nil)
-//        }
+        if KeyChain.load(key: "token") != nil {
+            print("222222222222q22")
+           goMain()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +80,12 @@ class LoginVC: UIViewController {
         
     }
     
+    private func goMain(){
+        let tmp = UINavigationController(rootViewController: MainVC())
+        tmp.modalPresentationStyle = .fullScreen
+        self.present(tmp, animated: false, completion: nil)
+    }
+
     
     private func displaySetting(){
         
@@ -121,37 +125,34 @@ class LoginVC: UIViewController {
                 print(error)
             } else {
                 print("--------------------------------------------")
-//                print("loginWithKakaoTalk() success.")
-//                if let kakaoData = oauthToken {
-//                    LoginService.shared.kakaoLogin(accessToken: kakaoData.accessToken, refreshToken: kakaoData.refreshToken) { result in
-//                        switch result {
-//                        case .success(let loginData):
-//                            print("success")
-//                            if let userData = loginData as? LoginResponse {
-//                                if let tokenData = userData.data.token.data(using: String.Encoding.utf8) {
-//                                    KeyChain.save(key: "token", data: tokenData)
-//                                }
-//                            }
-//                            print("액세스 토큰 : \(kakaoData.accessToken)")
-//                            print("리프레시 토큰 : \(kakaoData.refreshToken)")
-//
-//                        case .requestErr(_):
-//                            print("requestErr")®
-//                        case .pathErr:
-//                            print("pathErr")
-//                            print("여기")
-//                        case .serverErr:
-//                            print("serverErr")
-//                        case .networkFail:
-//                            print("networkFail")
-//                        }
-//                    }
-//                }
-                
-                let tmp = MainVC()
-                tmp.modalPresentationStyle = .fullScreen
-                self.present(tmp, animated: false, completion: nil)
-                
+                print("loginWithKakaoTalk() success.")
+                if let kakaoData = oauthToken {
+                    LoginService.shared.kakaoLogin(accessToken: kakaoData.accessToken) { result in
+                        switch result {
+                        case .success(let loginData):
+                            print("success")
+                            if let userData = loginData as? LoginResponse {
+                                if let tokenData = userData.result.accessToken.data(using: String.Encoding.utf8) {
+                                    KeyChain.save(key: "token", data: tokenData)
+                                    self.goMain()
+                                }
+                            }
+                            print("액세스 토큰 : \(kakaoData.accessToken)")
+                            print("리프레시 토큰 : \(kakaoData.refreshToken)")
+                            self.goMain()
+                        case .requestErr(_):
+                            print("requestErr")
+                        case .pathErr:
+                            print("액세스 토큰 : \(kakaoData.accessToken)")
+                            print("pathErr")
+                            print("여기")
+                        case .serverErr:
+                            print("serverErr")
+                        case .networkFail:
+                            print("networkFail")
+                        }
+                    }
+                }
             }
         }
         

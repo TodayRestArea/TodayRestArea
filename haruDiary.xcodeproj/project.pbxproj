@@ -12,6 +12,11 @@
 		D4BE68C5279344FB001910DC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68C4279344FB001910DC /* LoginService.swift */; };
 		D4BE68C927936026001910DC /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68C827936026001910DC /* MainService.swift */; };
 		D4BE68CB279360A8001910DC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68CA279360A8001910DC /* LoginModel.swift */; };
+		D4BE68CD2793789C001910DC /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68CC2793789C001910DC /* MainModel.swift */; };
+		D4BE68D42793790E001910DC /* DiaryWriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68D32793790E001910DC /* DiaryWriteService.swift */; };
+		D4BE68D627937918001910DC /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68D527937918001910DC /* DiaryModel.swift */; };
+		D4BE68D82793792A001910DC /* EmotionContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68D72793792A001910DC /* EmotionContentService.swift */; };
+		D4BE68DA27937935001910DC /* EmotionContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68D927937935001910DC /* EmotionContentModel.swift */; };
 		D4C5FB3F278EC98700A1B088 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5FB3E278EC98700A1B088 /* ContentCell.swift */; };
 		D4E7B91C278C53A700B209EF /* EmotionContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7B91B278C53A700B209EF /* EmotionContentVC.swift */; };
 		D4FF7B9E278AA84C005DA9EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7B9D278AA84C005DA9EA /* AppDelegate.swift */; };
@@ -23,7 +28,6 @@
 		D4FF7BB9278AA98E005DA9EA /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = D4FF7BB8278AA98E005DA9EA /* FSCalendar */; };
 		D4FF7BBC278AAA15005DA9EA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BBB278AAA15005DA9EA /* LoginVC.swift */; };
 		D4FF7BC2278AB62F005DA9EA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BC1278AB62F005DA9EA /* MainVC.swift */; };
-		D4FF7BC4278ACAE6005DA9EA /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BC3278ACAE6005DA9EA /* CalendarCell.swift */; };
 		D4FF7BC6278AD854005DA9EA /* DiaryWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +40,11 @@
 		D4BE68C4279344FB001910DC /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		D4BE68C827936026001910DC /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		D4BE68CA279360A8001910DC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		D4BE68CC2793789C001910DC /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		D4BE68D32793790E001910DC /* DiaryWriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryWriteService.swift; sourceTree = "<group>"; };
+		D4BE68D527937918001910DC /* DiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
+		D4BE68D72793792A001910DC /* EmotionContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionContentService.swift; sourceTree = "<group>"; };
+		D4BE68D927937935001910DC /* EmotionContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionContentModel.swift; sourceTree = "<group>"; };
 		D4C5FB3E278EC98700A1B088 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		D4E7B91B278C53A700B209EF /* EmotionContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionContentVC.swift; sourceTree = "<group>"; };
 		D4FF7B9A278AA84C005DA9EA /* haruDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haruDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +56,6 @@
 		D4FF7BBB278AAA15005DA9EA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D4FF7BC0278AAF17005DA9EA /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SANGJU Gotgam.otf"; sourceTree = "<group>"; };
 		D4FF7BC1278AB62F005DA9EA /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		D4FF7BC3278ACAE6005DA9EA /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryWrite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,8 +114,38 @@
 			children = (
 				D4FF7BC1278AB62F005DA9EA /* MainVC.swift */,
 				D4BE68C827936026001910DC /* MainService.swift */,
+				D4BE68CC2793789C001910DC /* MainModel.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		D4BE68D0279378B9001910DC /* DiaryWrite */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */,
+				D4BE68D32793790E001910DC /* DiaryWriteService.swift */,
+				D4BE68D527937918001910DC /* DiaryModel.swift */,
+			);
+			path = DiaryWrite;
+			sourceTree = "<group>";
+		};
+		D4BE68D1279378D4001910DC /* EmotionContent */ = {
+			isa = PBXGroup;
+			children = (
+				D4BE68D2279378E6001910DC /* Content */,
+				D4E7B91B278C53A700B209EF /* EmotionContentVC.swift */,
+				D4BE68D72793792A001910DC /* EmotionContentService.swift */,
+				D4BE68D927937935001910DC /* EmotionContentModel.swift */,
+			);
+			path = EmotionContent;
+			sourceTree = "<group>";
+		};
+		D4BE68D2279378E6001910DC /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				D4C5FB3E278EC98700A1B088 /* ContentCell.swift */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 		D4FF7B91278AA84C005DA9EA = {
@@ -137,23 +175,21 @@
 				D4FF7BA8278AA84C005DA9EA /* LaunchScreen.storyboard */,
 				D4FF7BAB278AA84C005DA9EA /* Info.plist */,
 				D4FF7BBF278AAF13005DA9EA /* font */,
-				D4FF7BBA278AA9D4005DA9EA /* VC */,
-				D493F3282793327900A130D2 /* network */,
+				D4FF7BBA278AA9D4005DA9EA /* resource */,
 			);
 			path = haruDiary;
 			sourceTree = "<group>";
 		};
-		D4FF7BBA278AA9D4005DA9EA /* VC */ = {
+		D4FF7BBA278AA9D4005DA9EA /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				D493F3282793327900A130D2 /* network */,
 				D4BE68C627935E96001910DC /* Login */,
 				D4BE68C72793600D001910DC /* Main */,
-				D4FF7BC3278ACAE6005DA9EA /* CalendarCell.swift */,
-				D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */,
-				D4E7B91B278C53A700B209EF /* EmotionContentVC.swift */,
-				D4C5FB3E278EC98700A1B088 /* ContentCell.swift */,
+				D4BE68D0279378B9001910DC /* DiaryWrite */,
+				D4BE68D1279378D4001910DC /* EmotionContent */,
 			);
-			path = VC;
+			path = resource;
 			sourceTree = "<group>";
 		};
 		D4FF7BBF278AAF13005DA9EA /* font */ = {
@@ -290,15 +326,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FF7B9E278AA84C005DA9EA /* AppDelegate.swift in Sources */,
+				D4BE68D627937918001910DC /* DiaryModel.swift in Sources */,
+				D4BE68CD2793789C001910DC /* MainModel.swift in Sources */,
 				D4BE68CB279360A8001910DC /* LoginModel.swift in Sources */,
 				D493F3272793327300A130D2 /* APIConstants.swift in Sources */,
 				D4FF7BC2278AB62F005DA9EA /* MainVC.swift in Sources */,
 				D4FF7BA0278AA84C005DA9EA /* SceneDelegate.swift in Sources */,
 				D4FF7BC6278AD854005DA9EA /* DiaryWrite.swift in Sources */,
+				D4BE68D42793790E001910DC /* DiaryWriteService.swift in Sources */,
 				D4E7B91C278C53A700B209EF /* EmotionContentVC.swift in Sources */,
 				D4FF7BBC278AAA15005DA9EA /* LoginVC.swift in Sources */,
-				D4FF7BC4278ACAE6005DA9EA /* CalendarCell.swift in Sources */,
+				D4BE68DA27937935001910DC /* EmotionContentModel.swift in Sources */,
 				D4BE68C927936026001910DC /* MainService.swift in Sources */,
+				D4BE68D82793792A001910DC /* EmotionContentService.swift in Sources */,
 				D4C5FB3F278EC98700A1B088 /* ContentCell.swift in Sources */,
 				D4BE68C5279344FB001910DC /* LoginService.swift in Sources */,
 			);
