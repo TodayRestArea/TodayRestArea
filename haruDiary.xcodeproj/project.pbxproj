@@ -35,6 +35,7 @@
 		247388134D7629677E717359 /* Pods-haruDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haruDiary.debug.xcconfig"; path = "Target Support Files/Pods-haruDiary/Pods-haruDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		49405C78B50538E79B14763A /* Pods_haruDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_haruDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D5470F4CE3AAE0C5ABFE89 /* Pods-haruDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haruDiary.release.xcconfig"; path = "Target Support Files/Pods-haruDiary/Pods-haruDiary.release.xcconfig"; sourceTree = "<group>"; };
+		D4572ADF27947AE100547137 /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SANGJU Gotgam.otf"; sourceTree = "<group>"; };
 		D493F3262793327300A130D2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		D493F3292793329300A130D2 /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SANGJU Gotgam.otf"; path = "../../../../Downloads/Mac용+상주시+전용서체+-+OTF/SANGJU Gotgam.otf"; sourceTree = "<group>"; };
 		D4BE68C4279344FB001910DC /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 				D4FF7B9F278AA84C005DA9EA /* SceneDelegate.swift */,
 				D4FF7BA6278AA84C005DA9EA /* Assets.xcassets */,
 				D4FF7BA8278AA84C005DA9EA /* LaunchScreen.storyboard */,
+				D4572ADF27947AE100547137 /* SANGJU Gotgam.otf */,
 				D4FF7BAB278AA84C005DA9EA /* Info.plist */,
 				D4FF7BBF278AAF13005DA9EA /* font */,
 				D4FF7BBA278AA9D4005DA9EA /* resource */,

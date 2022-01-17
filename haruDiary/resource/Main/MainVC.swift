@@ -103,9 +103,8 @@ class MainVC: UIViewController {
             nextVC.date = clickedDate
            // getMyDiaryDetail(from: selectionIdx ?? 0)
             //nextVC.diary = selectionDiary
-          
+            nextVC.diaryId = selectionIdx
             nextVC.modalPresentationStyle = .fullScreen
-           
             self.navigationController?.pushViewController(nextVC, animated: false)
         }
     }
@@ -159,7 +158,7 @@ class MainVC: UIViewController {
             switch response {
             case .success(let thisdata):
                 if let responseValue = thisdata as? ReponseCalendar,
-                   let diaryList = responseValue.result as? [Diary] {
+                   let diaryList = responseValue.result {
                     self?.thisDays = diaryList
                 }
                 print("success")
@@ -222,14 +221,14 @@ extension MainVC: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAp
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-//        let dateformatter = DateFormatter()
-//        dateformatter.dateFormat = "yyyy-MM-dd"
-//        dateformatter.locale = Locale(identifier: "ko_KR")
-//        let thisdateStr = dateformatter.string(from: date)
-//        let subtitle = thisDays?.filter{
-//            return $0.createdAt == thisdateStr
-//        }
-//        selectionIdx = subtitle?[0].diaryIdx
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy-MM-dd"
+        dateformatter.locale = Locale(identifier: "ko_KR")
+        let thisdateStr = dateformatter.string(from: date)
+        let subtitle = thisDays?.filter{
+            return $0.createdAt == thisdateStr
+        }
+        selectionIdx = subtitle?[0].diaryIdx
         clickedDate = date
     }
     

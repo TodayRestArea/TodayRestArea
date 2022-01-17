@@ -6,6 +6,9 @@ class EmotionContentVC: UIViewController {
     var titlestr = String()
     var date = Date()
     var emotions = "슬픔"
+    var content: contentResponse?
+    
+    
     
     lazy var todayEmotion: UILabel = { [weak self] in
         guard let self = self else {return UILabel()}
@@ -62,8 +65,6 @@ class EmotionContentVC: UIViewController {
         return cv
     }()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = titlestr
@@ -116,9 +117,6 @@ class EmotionContentVC: UIViewController {
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(180)
         }
-        
-        
-        
         
     }
 }

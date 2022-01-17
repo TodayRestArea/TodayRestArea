@@ -19,7 +19,7 @@ struct APIConstants {
     
     static let diarywirte = "diarys"
     
-    
+    static let writeDiary = "diarys/"
     static let showDiaryMonyh = "diarys/"
     static let getDetailDiary = "diarys/details/"
     // Base URL
@@ -37,7 +37,7 @@ enum NetworkResult<T> {
 
 
 enum NetworkHeaderKey: String {
-    case auth = "x-auth-token"
+    case auth = "Authorization"
     case contentType = "Content-Type"
 }
 
