@@ -8,26 +8,39 @@
 import Foundation
 
 struct ReponseCalendar : Codable {
-    let isSuccess: Bool?
-    let code : Int?
-    let message : String?
+    let isSuccess: Bool
+    let code : Int
+    let message : String
     let result : [Diary]?
 }
 
 struct Diary : Codable {
-    let createdAt : String?
-    let isanalyzed : String?
-    let emotionIdx : String?
-    let diaryIdx : Int?
-    let weatherIdx: Int?
-    let contents: String?
+    let createdDate : String?
+    let emotionId : Int?
+    let diaryId : Int?
 }
 
 struct ReponseDetailCalendar : Codable {
     let isSuccess: Bool?
     let code : Int?
     let message : String?
-    let result : Diary?
+    let result : DetailDiary?
+}
+
+struct DetailDiary: Codable {
+    let emotionId : Int?
+    let weatherId : Int?
+    let createdDate : String?
+    let contents : String?
+    
+    
+    init(emotionId: Int, weatherId: Int, createdDate: String, contents: String){
+        self.emotionId = emotionId
+        self.weatherId = weatherId
+        self.createdDate = createdDate
+        self.contents = contents
+    }
+    
 }
 
 

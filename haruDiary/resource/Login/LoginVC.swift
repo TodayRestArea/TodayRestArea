@@ -24,9 +24,9 @@ class LoginVC: UIViewController {
     
     let titleView: UILabel = {
         let titleView = UILabel(frame: .zero)
-        titleView.text = "하루 일기"
+        titleView.text = "하루 휴게소"
         titleView.textAlignment = .center
-        titleView.font = UIFont(name: "SANGJU-Gotgam", size: 35)
+        titleView.font = UIFont(name: "JalnanOTF", size: 35)
         titleView.textColor = .black
         titleView.alpha = 0
         return titleView
@@ -36,7 +36,7 @@ class LoginVC: UIViewController {
         let titleView = UILabel(frame: .zero)
         titleView.text = "당신의"
         titleView.textAlignment = .center
-        titleView.font = UIFont(name: "SANGJU-Gotgam", size: 18)
+        titleView.font = UIFont(name: "JalnanOTF", size: 18)
         titleView.textColor = .gray
         titleView.alpha = 0
         return titleView
@@ -61,8 +61,7 @@ class LoginVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if KeyChain.load(key: "token") != nil {
-            print("222222222222q22")
-           goMain()
+           //goMain()
         }
     }
     
@@ -134,12 +133,12 @@ class LoginVC: UIViewController {
                             if let userData = loginData as? LoginResponse {
                                 if let tokenData = userData.result.accessToken.data(using: String.Encoding.utf8) {
                                     KeyChain.save(key: "token", data: tokenData)
+                                    print(tokenData)
                                     self.goMain()
                                 }
                             }
                             print("액세스 토큰 : \(kakaoData.accessToken)")
                             print("리프레시 토큰 : \(kakaoData.refreshToken)")
-                            self.goMain()
                         case .requestErr(_):
                             print("requestErr")
                         case .pathErr:

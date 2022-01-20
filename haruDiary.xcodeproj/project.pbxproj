@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		97E06727CB17097F04269CBD /* Pods_haruDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49405C78B50538E79B14763A /* Pods_haruDiary.framework */; };
+		D4021E722799966800FCADE5 /* 온글잎 보현체.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4021E712799966800FCADE5 /* 온글잎 보현체.ttf */; };
+		D4021E74279996EA00FCADE5 /* NotCliche OTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4021E73279996EA00FCADE5 /* NotCliche OTF.otf */; };
+		D4021E762799980A00FCADE5 /* CookieRun Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4021E752799980A00FCADE5 /* CookieRun Bold.otf */; };
+		D4021E78279998CE00FCADE5 /* JalnanOTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4021E77279998CE00FCADE5 /* JalnanOTF.otf */; };
 		D493F3272793327300A130D2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D493F3262793327300A130D2 /* APIConstants.swift */; };
+		D4BDDE0D2797F9F7004A0B10 /* SANGJU-Gotgam.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4BDDE0C2797F9F7004A0B10 /* SANGJU-Gotgam.otf */; };
 		D4BE68C5279344FB001910DC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68C4279344FB001910DC /* LoginService.swift */; };
 		D4BE68C927936026001910DC /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68C827936026001910DC /* MainService.swift */; };
 		D4BE68CB279360A8001910DC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE68CA279360A8001910DC /* LoginModel.swift */; };
@@ -35,9 +40,12 @@
 		247388134D7629677E717359 /* Pods-haruDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haruDiary.debug.xcconfig"; path = "Target Support Files/Pods-haruDiary/Pods-haruDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		49405C78B50538E79B14763A /* Pods_haruDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_haruDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D5470F4CE3AAE0C5ABFE89 /* Pods-haruDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haruDiary.release.xcconfig"; path = "Target Support Files/Pods-haruDiary/Pods-haruDiary.release.xcconfig"; sourceTree = "<group>"; };
-		D4572ADF27947AE100547137 /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SANGJU Gotgam.otf"; sourceTree = "<group>"; };
+		D4021E712799966800FCADE5 /* 온글잎 보현체.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "온글잎 보현체.ttf"; path = "../../../../Downloads/온글잎 보현체.ttf"; sourceTree = "<group>"; };
+		D4021E73279996EA00FCADE5 /* NotCliche OTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotCliche OTF.otf"; path = "../../../../Downloads/NotCliche OTF.otf"; sourceTree = "<group>"; };
+		D4021E752799980A00FCADE5 /* CookieRun Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CookieRun Bold.otf"; path = "../../../../Downloads/CookieRunFont_OTF/CookieRun Bold.otf"; sourceTree = "<group>"; };
+		D4021E77279998CE00FCADE5 /* JalnanOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = JalnanOTF.otf; path = ../../../../Downloads/JalnanOTF.otf; sourceTree = "<group>"; };
 		D493F3262793327300A130D2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		D493F3292793329300A130D2 /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SANGJU Gotgam.otf"; path = "../../../../Downloads/Mac용+상주시+전용서체+-+OTF/SANGJU Gotgam.otf"; sourceTree = "<group>"; };
+		D4BDDE0C2797F9F7004A0B10 /* SANGJU-Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SANGJU-Gotgam.otf"; path = "../../../../Downloads/Mac용+상주시+전용서체+-+OTF/SANGJU-Gotgam.otf"; sourceTree = "<group>"; };
 		D4BE68C4279344FB001910DC /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		D4BE68C827936026001910DC /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		D4BE68CA279360A8001910DC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -55,7 +63,6 @@
 		D4FF7BA9278AA84C005DA9EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4FF7BAB278AA84C005DA9EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4FF7BBB278AAA15005DA9EA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		D4FF7BC0278AAF17005DA9EA /* SANGJU Gotgam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SANGJU Gotgam.otf"; sourceTree = "<group>"; };
 		D4FF7BC1278AB62F005DA9EA /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D4FF7BC5278AD854005DA9EA /* DiaryWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryWrite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,7 +181,6 @@
 				D4FF7B9F278AA84C005DA9EA /* SceneDelegate.swift */,
 				D4FF7BA6278AA84C005DA9EA /* Assets.xcassets */,
 				D4FF7BA8278AA84C005DA9EA /* LaunchScreen.storyboard */,
-				D4572ADF27947AE100547137 /* SANGJU Gotgam.otf */,
 				D4FF7BAB278AA84C005DA9EA /* Info.plist */,
 				D4FF7BBF278AAF13005DA9EA /* font */,
 				D4FF7BBA278AA9D4005DA9EA /* resource */,
@@ -197,8 +203,11 @@
 		D4FF7BBF278AAF13005DA9EA /* font */ = {
 			isa = PBXGroup;
 			children = (
-				D493F3292793329300A130D2 /* SANGJU Gotgam.otf */,
-				D4FF7BC0278AAF17005DA9EA /* SANGJU Gotgam.otf */,
+				D4021E712799966800FCADE5 /* 온글잎 보현체.ttf */,
+				D4021E73279996EA00FCADE5 /* NotCliche OTF.otf */,
+				D4021E752799980A00FCADE5 /* CookieRun Bold.otf */,
+				D4021E77279998CE00FCADE5 /* JalnanOTF.otf */,
+				D4BDDE0C2797F9F7004A0B10 /* SANGJU-Gotgam.otf */,
 			);
 			path = font;
 			sourceTree = "<group>";
@@ -273,8 +282,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BDDE0D2797F9F7004A0B10 /* SANGJU-Gotgam.otf in Resources */,
+				D4021E722799966800FCADE5 /* 온글잎 보현체.ttf in Resources */,
+				D4021E78279998CE00FCADE5 /* JalnanOTF.otf in Resources */,
 				D4FF7BAA278AA84C005DA9EA /* LaunchScreen.storyboard in Resources */,
 				D4FF7BA7278AA84C005DA9EA /* Assets.xcassets in Resources */,
+				D4021E74279996EA00FCADE5 /* NotCliche OTF.otf in Resources */,
+				D4021E762799980A00FCADE5 /* CookieRun Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

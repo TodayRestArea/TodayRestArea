@@ -8,57 +8,57 @@ import KakaoSDKUser
 
 class MainVC: UIViewController {
     
-    let emotionType: [String] = {
-        var tmp =  [String]()
-        tmp.append("?")
-        tmp.append("😡")
-        tmp.append("😢")
-        tmp.append("😵‍💫")
-        tmp.append("😭")
-        tmp.append("😱")
-        tmp.append("🤗")
+    let emotionType: [UIImage] = {
+        var tmp =  [UIImage]()
+        tmp.append(UIImage(named: "q")!)
+        tmp.append(UIImage(named: "angry")!)
+        tmp.append(UIImage(named: "sad")!)
+        tmp.append(UIImage(named: "panic")!)
+        tmp.append(UIImage(named: "nervous")!)
+        tmp.append(UIImage(named: "happy")!)
         return tmp
     }()
-    var selectionIdx: Int?
-    var selectionDiary : Diary?
-    var clickedDate: Date?
-    var thisDays : [Diary]?
-    let logo: UIView = {
-        let titleView: UILabel = {
-            let titleView = UILabel(frame: .zero)
-            titleView.text = "하루 일기"
-            titleView.textAlignment = .left
-            titleView.font = UIFont(name: "SANGJU-Gotgam", size: 30)
-            titleView.textColor = .black
-            return titleView
-        }()
+    
+    var selectionIdx: Int = -1
+    
+    var selectionDiary: DetailDiary?
+    
+    var clickedDate: Date = Date()
+    
+    var thisDays : [Diary] = []
+    
+    let titleView: UIView = {
+        
         
         let subtitleView: UILabel = {
             let titleView = UILabel(frame: .zero)
             titleView.text = "당신의"
             titleView.textAlignment = .left
-            titleView.font = UIFont(name: "SANGJU-Gotgam", size: 22)
+            titleView.font = UIFont(name: "JalnanOTF", size: 12)
             titleView.textColor = .gray
             return titleView
         }()
-        
+        let titleView = UILabel(frame: .zero)
+        titleView.text = "하루 휴게소"
+        titleView.textAlignment = .left
+        titleView.font = UIFont(name: "JalnanOTF", size: 24)
+        titleView.textColor = .black
         let view = UIView()
         view.addSubview(subtitleView)
         subtitleView.snp.makeConstraints{
-            $0.leading.equalToSuperview()
-            $0.top.equalToSuperview()
-            $0.width.equalTo(80)
-            $0.height.equalTo(30)
+            $0.top.leading.trailing.equalToSuperview()
+            $0.height.equalTo(15)
         }
         view.addSubview(titleView)
         titleView.snp.makeConstraints{
-            $0.leading.equalToSuperview()
             $0.top.equalTo(subtitleView.snp.bottom)
-            $0.width.equalTo(150)
-            $0.height.equalTo(30)
+            $0.leading.equalToSuperview()
+            $0.bottom.equalToSuperview()
+            $0.trailing.equalToSuperview()
         }
         return view
     }()
+    
     let calendar: FSCalendar = {
         let tmp = FSCalendar()
         tmp.locale = Locale(identifier: "ko_KR")
@@ -71,64 +71,63 @@ class MainVC: UIViewController {
         tmp.calendarWeekdayView.weekdayLabels[6].text = "토"
         return tmp
     }()
+    
     let addView: UIView = {
         let temp = UIView()
         let plusImageView = UIImageView(image: UIImage(systemName: "plus"))
+        plusImageView.tintColor = .white
         temp.addSubview(plusImageView)
         plusImageView.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(8)
         }
+        temp.backgroundColor = UIColor(red: 84/255, green: 168/255, blue: 164/255, alpha: 1)
+        temp.layer.cornerRadius = 30
         return temp
     }()
     
-    
-    
-    
-    
     @objc private func clickedAddView(_ sender: Any){
-        let nextVC = DiaryWrite()
-        
-        guard let clickedDate = clickedDate else {
-            print("선택을 하셔야합니다 ㄱㅅㄲ야")
-            return
-        }
         if(clickedDate.compare(Date()) == .orderedDescending){
             print(clickedDate)
             print(Date())
             print("선택이 안됩니다 ㄱㅅㄲ야")
         }else{
-            print(clickedDate)
-            print(Date())
-            print("선택")
-            nextVC.date = clickedDate
-           // getMyDiaryDetail(from: selectionIdx ?? 0)
-            //nextVC.diary = selectionDiary
-            nextVC.diaryId = selectionIdx
-            nextVC.modalPresentationStyle = .fullScreen
-            self.navigationController?.pushViewController(nextVC, animated: false)
+            if selectionIdx != -1{
+                print(selectionIdx)
+                getMyDiaryDetail(from: selectionIdx)
+            }else {
+                let nextVC = DiaryWrite()
+                nextVC.date = clickedDate
+                nextVC.diaryId = selectionIdx
+                nextVC.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(nextVC, animated: false)
+            }
+            
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        getDiaryList(thisdate: calendar.currentPage.addingTimeInterval(86400))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getDiaryList(thisdate: calendar.currentPage.addingTimeInterval(86400))
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getDiaryList(thisdate: Date())
         makeConstraints()
         calendarSetting()
         navigationBarSetting()
-        getDiaryList(thisdate: Date())
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    
     private func navigationBarSetting(){
-        let barLogo = UIBarButtonItem(customView: logo)
-        self.navigationItem.leftBarButtonItem = barLogo
+        
         let g = UITapGestureRecognizer(target: self, action: #selector(clickedAddView(_:)))
         addView.addGestureRecognizer(g)
+        self.navigationController?.navigationBar.topItem?.titleView = titleView
     }
     
     private func calendarSetting(){
@@ -137,13 +136,13 @@ class MainVC: UIViewController {
         calendar.appearance.headerTitleFont = UIFont(name: "SANGJU-Gotgam", size: 25)
         calendar.appearance.headerTitleColor = .black
         calendar.appearance.titleTodayColor = .black
-        calendar.appearance.headerDateFormat = "M 월"
+        calendar.appearance.headerDateFormat = "  M월"
         calendar.appearance.weekdayTextColor = .black
         calendar.appearance.subtitleFont = UIFont(name: "SANGJU-Gotgam", size: 25)
         calendar.appearance.eventSelectionColor = .blue
         calendar.appearance.eventDefaultColor = .clear
         calendar.appearance.todayColor = .clear
-        calendar.appearance.titleSelectionColor = .green
+        calendar.appearance.titleSelectionColor = .white
         calendar.appearance.subtitleSelectionColor = .none
         calendar.appearance.weekdayFont = UIFont(name: "SANGJU-Gotgam", size: 14)
         calendar.register(FSCalendarCell.self, forCellReuseIdentifier: "CalanderCell")
@@ -151,17 +150,17 @@ class MainVC: UIViewController {
     
     private func getDiaryList(thisdate this : Date){
         let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "yyMM"
+        dateformatter.dateFormat = "yyyy-MM"
         dateformatter.locale = Locale(identifier: "ko_KR")
         let thisdateStr = dateformatter.string(from: this)
-        showMyCalneder.shared.getMyData(thisMonth: thisdateStr){ [weak self] response in
+        showMyCalneder.shared.getMyData(thisMonth: thisdateStr){ [unowned self] response in
             switch response {
             case .success(let thisdata):
                 if let responseValue = thisdata as? ReponseCalendar,
                    let diaryList = responseValue.result {
-                    self?.thisDays = diaryList
+                    self.thisDays = diaryList
+                    self.calendar.reloadData()
                 }
-                print("success")
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:
@@ -172,18 +171,21 @@ class MainVC: UIViewController {
                 print("networkFail")
             }
         }
-        
     }
     
     private func getMyDiaryDetail(from idx: Int){
-        getDetailDiary.shared.getMyData(thisMonth: idx){[weak self]response in
+        getDetailDiary.shared.getMyData(thisMonth: idx){ [unowned self] response in
             switch response {
             case .success(let thisdata):
                 if let responseValue = thisdata as? ReponseDetailCalendar,
-                   let diaryList = responseValue.result as Diary? {
-                    self?.selectionDiary = diaryList
+                   let diaryList = responseValue.result {
+                    let nextVC = DiaryWrite()
+                    nextVC.date = clickedDate
+                    nextVC.diary = diaryList
+                    nextVC.diaryId = selectionIdx
+                    nextVC.modalPresentationStyle = .fullScreen
+                    self.navigationController?.pushViewController(nextVC, animated: true)
                 }
-                print("success")
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:
@@ -194,8 +196,8 @@ class MainVC: UIViewController {
                 print("networkFail")
             }
         }
-        
     }
+    
     private func makeConstraints(){
         view.addSubview(addView)
         addView.snp.makeConstraints{
@@ -205,8 +207,8 @@ class MainVC: UIViewController {
         }
         view.addSubview(calendar)
         calendar.snp.makeConstraints{
-            $0.top.equalTo(view.safeAreaLayoutGuide).inset(50)
-            $0.leading.trailing.equalTo(view.safeAreaInsets).inset(12)
+            $0.top.equalTo(view.safeAreaLayoutGuide).inset(12)
+            $0.leading.trailing.equalTo(view.safeAreaInsets)
             $0.bottom.equalTo(addView.snp.top)
         }
     }
@@ -216,41 +218,83 @@ class MainVC: UIViewController {
 extension MainVC: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance{
     func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
         let cell = calendar.dequeueReusableCell(withIdentifier: "CalanderCell", for: date, at: position)
-        
         return cell
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy-MM-dd"
         dateformatter.locale = Locale(identifier: "ko_KR")
         let thisdateStr = dateformatter.string(from: date)
-        let subtitle = thisDays?.filter{
-            return $0.createdAt == thisdateStr
+        var subtitle = -1
+        self.thisDays.forEach{
+            if $0.createdDate == thisdateStr {
+                subtitle = $0.diaryId!
+            }
         }
-        selectionIdx = subtitle?[0].diaryIdx
-        clickedDate = date
+        if subtitle != -1 {
+            selectionIdx = subtitle
+            clickedDate = date
+            getMyDiaryDetail(from: selectionIdx)
+        } else if (clickedDate.compare(Date()) == .orderedDescending){
+            let alert = UIAlertController(title: "미래에 일기를 쓰실려구요?", message: "저희는 겪은 경험만 분석합니다 ㅎㅎ", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            selectionIdx = subtitle
+            clickedDate = date
+        }
     }
+    
+    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
+        
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy-MM-dd"
+        dateformatter.locale = Locale(identifier: "ko_KR")
+        let thisdateStr = dateformatter.string(from: date)
+        var subtitle = 10
+        self.thisDays.forEach{
+            if $0.createdDate == thisdateStr {
+                subtitle = $0.emotionId!
+            }
+        }
+        
+        let image = subtitle == 10 ? UIImage() : emotionType[subtitle]
+        let size = image.size
+        let widthRatio  = 40  / size.width
+        let heightRatio = 40 / size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(origin: .zero, size: newSize)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillSelectionColorFor date: Date) -> UIColor? {
-        return .clear
+        return UIColor(red: 84/255, green: 168/255, blue: 164/255, alpha: 1)
     }
     
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, imageOffsetFor date: Date) -> CGPoint {
+        return CGPoint(x: 0, y: 13)
+    }
     
-    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
-        let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "yyyy-MM-dd"
-        dateformatter.locale = Locale(identifier: "ko_KR")
-        let thisdateStr = dateformatter.string(from: date)
-        let subtitle = thisDays?.filter{
-            return $0.createdAt == thisdateStr
-        }
-        return subtitle?[0].emotionIdx
-        
-    }
-    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, subtitleOffsetFor date: Date) -> CGPoint {
-        return CGPoint(x: 0, y: 20)
-    }
     
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         getDiaryList(thisdate: calendar.currentPage.addingTimeInterval(86400))
@@ -258,6 +302,9 @@ extension MainVC: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAp
             calendar.reloadData()
         }
     }
+    
+    
+    
     
 }
 

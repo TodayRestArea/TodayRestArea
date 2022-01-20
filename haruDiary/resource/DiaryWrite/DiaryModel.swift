@@ -20,7 +20,7 @@ struct DiaryWriteResponse: Codable {
 }
 
 struct ResultDiary: Codable {
-    let diaryIdx: Int?
+    let diaryId: Int?
 }
 
 struct AnalyzeDiaryResponse: Codable {
@@ -33,24 +33,19 @@ struct AnalyzeDiaryResponse: Codable {
 // MARK: - Result
 struct contentResponse: Codable {
     let createdDate: String?
-    let emotionID: Int?
-    let recommendMusicList: [RecommendMusicList]?
-    let recommendMovieList: [RecommendMovieList]?
-
-    enum CodingKeys: String, CodingKey {
-        case createdDate
-        case emotionID
-        case recommendMusicList, recommendMovieList
-    }
+    let emotionId: Int?
+    let emotionName: String?
+    let recommendMusics: [RecommendMusicList]?
+    let recommendMovies: [RecommendMovieList]?
 }
 
 
 // MARK: - RecommendMovieList
 struct RecommendMovieList: Codable {
-    let title, poster, url: String?
+    let title, director, plot, posterUrl, infoUrl: String?
 }
 
 // MARK: - RecommendMusicList
 struct RecommendMusicList: Codable {
-    let title, artist, poster: String?
+    let title, artist, posterUrl, infoUrl: String?
 }

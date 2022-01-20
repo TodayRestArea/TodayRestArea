@@ -8,9 +8,9 @@ struct WriteDiary{
 
     private func makeParameter(weatherIdx : Int, contents : String, cratedAt : String) -> Parameters
     {
-        return ["weatherIdx" : weatherIdx,
+        return ["weatherId" : weatherIdx,
                 "contents" : contents,
-                "cratedAt" : cratedAt
+                "createdDate" : cratedAt
             ]
     }
 
@@ -34,7 +34,6 @@ struct WriteDiary{
 
             }
         }
-
     }
 
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
@@ -59,11 +58,11 @@ struct AnalyzeDiary
 
     func getMyData(diaryId: String ,completion : @escaping (NetworkResult<Any>) -> Void)
     {
-        let URL = APIConstants.baseURL + "/diarys/\(diaryId)/analysis"
+        let URL = APIConstants.baseURL + "diarys/\(diaryId)/analysis"
         let header : HTTPHeaders = NetworkInfo.headerWithToken
-        
+        print(URL)
         let dataRequest = AF.request(URL,
-                                     method: .get,
+                                     method: .put,
                                      encoding: JSONEncoding.default,
                                      headers: header)
         dataRequest.responseData { dataResponse in
@@ -96,22 +95,20 @@ struct AnalyzeDiary
 struct EditDiary {
     
     static let shared = EditDiary()
-
-    private func makeParameter(weatherIdx : Int, contents : String, cratedAt : String) -> Parameters
+    private func makeParameter(weatherIdx : Int, contents : String) -> Parameters
     {
-        return ["weatherIdx" : weatherIdx,
-                "contents" : contents,
-                "cratedAt" : cratedAt
+        return ["weatherId" : weatherIdx,
+                "contents" : contents
             ]
     }
 
-    func saveDiary(weatherIdx : Int, contents : String, cratedAt : String, diaryId : String , completion : @escaping(NetworkResult<Any>) -> Void) {
+    func saveDiary(weatherIdx : Int, contents : String, diaryId : String? , completion : @escaping(NetworkResult<Any>) -> Void) {
        
-        let url: String = APIConstants.baseURL +  "/diarys/\(diaryId)"
+        let url: String = APIConstants.baseURL +  "diarys/\(diaryId!)"
         let header : HTTPHeaders = NetworkInfo.headerWithToken
         let dataRequest = AF.request(url,
                                      method: .put,
-                                     parameters: makeParameter(weatherIdx: weatherIdx, contents: contents, cratedAt: cratedAt),
+                                     parameters: makeParameter(weatherIdx: weatherIdx, contents: contents),
                                      encoding: JSONEncoding.default,
                                      headers: header)
         dataRequest.responseData { dataResponse in
@@ -123,19 +120,16 @@ struct EditDiary {
                 let networkResult = self.judgeStatus(by: statusCode, value)
                 completion(networkResult)
             case .failure: completion(.pathErr)
-
             }
         }
 
     }
 
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
-
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(DiaryWriteResponse.self, from: data)
         else { return .pathErr}
         switch statusCode {
-
         case 200: return .success(decodedData)
         case 400: return .requestErr(decodedData)
         case 500: return .serverErr
@@ -144,15 +138,15 @@ struct EditDiary {
     }
 }
 
+
 struct DeleteDiary
 {
     static let shared = DeleteDiary()
 
-    func getMyData(diaryId: String ,completion : @escaping (NetworkResult<Any>) -> Void)
+    func getMyData(diaryId: String? ,completion : @escaping (NetworkResult<Any>) -> Void)
     {
-        let URL = APIConstants.baseURL + "/diarys/\(diaryId)"
+        let URL = APIConstants.baseURL + "diarys/\(diaryId!)"
         let header : HTTPHeaders = NetworkInfo.headerWithToken
-        
         let dataRequest = AF.request(URL,
                                      method: .delete,
                                      encoding: JSONEncoding.default,
