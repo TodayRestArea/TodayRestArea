@@ -1,3 +1,15 @@
+### 목차
+1. [🗓️ 서비스 소개](#🗓️-서비스-소개)
+2. [🌞 Flow](#🌞-Flow)
+3. [⏰ 개발 기간](#⏰-개발-기간-(2022.01.08-~-2022.01.23))
+4. [✨ 주요기능 소개](#✨-주요기능-소개)
+5. [🛠️ 기술스택](#🛠️-기술스택)
+6. [📚 Readme 모음집](#📚-Readme-모음집)
+7. [✏️ 기획 및 설계](#✏️-기획-및-설계)
+8. [👨‍👩‍👦‍👦 휴게소직원들 소개](#👨‍👩‍👦‍👦-휴게소직원들-소개)
+---
+# 🗓️ 서비스 소개
+
 ![](https://images.velog.io/images/tlsrlgkrry/post/a05c66e2-ac85-45c1-855c-84840affe4dc/%ED%95%98%EB%A3%A8%ED%9C%B4%EA%B2%8C%EC%86%8C.PNG)
 
 # 	🏠하루의 마무리, 하루 휴게소🏠 
@@ -80,13 +92,14 @@
     - aws (ec2)
     
 ## 📚 Readme 모음집
-IOS :  https://github.com/TodayRestArea/TodayRestArea_IOS/blob/main/README.md   
+IOS :  https://github.com/TodayRestArea/TodayRestArea_IOS/blob/main/README.md     
 BackEnd : https://github.com/TodayRestArea/TodayRestArea_backend  
 ML : 
 
 ## ✏️ 기획 및 설계
 
 [📌 API 명세서](https://military-wildcat-495.notion.site/API-6d692255a9f54a978caf54de4764e5f9)
+
 [📌 ERD](https://www.erdcloud.com/d/9ZnEyAaCZRZPKS3y9)
 
 ## 👨‍👩‍👦‍👦 팀 소개 (휴게소 직원들)
