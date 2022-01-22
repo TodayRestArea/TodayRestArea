@@ -100,7 +100,7 @@
 ## 📚 Readme 모음집
 IOS :  https://github.com/TodayRestArea/TodayRestArea_IOS/blob/main/README.md     
 BackEnd : https://github.com/TodayRestArea/TodayRestArea_backend  
-ML : 
+AI : https://github.com/TodayRestArea/TodayRestArea_AI
 
 ## ✏️ 기획 및 설계
 
