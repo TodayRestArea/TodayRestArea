@@ -10,7 +10,7 @@
 ---
 # 🗓️ 서비스 소개
 
-![](https://images.velog.io/images/tlsrlgkrry/post/a05c66e2-ac85-45c1-855c-84840affe4dc/%ED%95%98%EB%A3%A8%ED%9C%B4%EA%B2%8C%EC%86%8C.PNG)
+![](https://user-images.githubusercontent.com/70425378/150645689-85ac38ad-7d78-448b-a069-bb6cf9171fa2.PNG)
 
 # 	🏠하루의 마무리, 하루 휴게소🏠 
 
@@ -36,35 +36,37 @@
 결과적으로 저희는 `감정을 파악`해주고 그에 맞는 `콘텐츠를 추천`하여 감정해소의 기회를 제공하는 서비스인 하루 휴게소를 만들게 되었습니다.
    
 ## 🌞Flow
-![](https://images.velog.io/images/tlsrlgkrry/post/7fd5cd60-2bce-4210-9b2c-abb5324c3608/%ED%95%98%EB%A3%A8%20%ED%9C%B4%EA%B2%8C%EC%86%8C%20%EC%9C%A0%EC%A0%80%ED%94%8C%EB%A1%9C%EC%9A%B0.png)
+![](https://user-images.githubusercontent.com/70425378/150645708-1cff9062-182f-47eb-aab9-400b5ae00c27.png)
 
 ## ⏰ 개발 기간 (2022.01.08 ~ 2022.01.23)      
 기획 및 디자인 : 2022.01.08 ~ 2022.01.13    
 개발 : 2022.01.14 ~ 2022.01.23
 
 ## ✨ 주요기능 소개
+<img src="https://user-images.githubusercontent.com/70425378/150646104-a18cd634-48a8-4db3-b874-b6a0486c4625.gif"  width="200" height="420"/>
+
 ### 1️⃣ 로그인
 카카오 소셜로그인을 이용하여 사용자의 편리함을 제공하였고 로그인 후에 JWT를 반환하였습니다.   
 로그인 시 DB에 조회하여 DB에 없는 경우 추가시켰습니다.
    
-<img src="https://images.velog.io/images/tlsrlgkrry/post/ed01b088-e64d-4465-a102-cf4e35892eb0/KakaoTalk_20220122_233807104.png"  width="200" height="420"/>
+<img src="https://user-images.githubusercontent.com/70425378/150645692-33b88b49-7104-4046-8a4e-5d6f94b492b5.png"  width="200" height="420"/>
 
 ### 2️⃣ 월별 일기조회
 월별 일기조회페이지는 메인페이지로 해당 월에 작성한 일기들이 보입니다.   
  분석완료한 일기는 해당 감정의 이모지가 노출되고 일기작성은 완료하였지만 분석하지 않은 일기는 "?" 이모지가 노출되도록 했습니다.   
- <img src="https://images.velog.io/images/tlsrlgkrry/post/7e3fa315-8149-430c-b91b-012781306601/KakaoTalk_20220122_233807104_02.png"  width="200" height="420"/>
+ <img src="https://user-images.githubusercontent.com/70425378/150645697-216cd34b-78b3-40e2-802c-18ecd5c20e67.png"  width="200" height="420"/>
  
  
  ### 3️⃣ 일기 작성 및 조회
 메인페이지에서 날짜를 선택하면 해당 페이지로 넘어오게 됩니다. 
 일기를 작성하지 않았다면 빈 텍스트뷰와 "Save"버튼이 보이고  
 이미 일기를 작성했다면 저장된 일기와 "Analyze"버튼이 보입니다.  
-<img src="https://images.velog.io/images/tlsrlgkrry/post/c45d8e43-054a-44a0-a1af-41e332b019c9/%ED%96%89%EB%B3%B5.png"  width="200" height="420"/>
+<img src="https://user-images.githubusercontent.com/70425378/150645703-27443d56-f4ca-481b-a7d5-bd01e9c63f40.png"  width="200" height="420"/>
  
  ### 4️⃣ 일기 분석
  작성한 일기 상세보기 페이지에서 "Analyze"버튼을 누르면 작성된 일기를 분석하여
  감정을 정의해 주고 감정에 맞는 음악, 영화컨텐츠를 추천하여 감정해소 기회를 제공합니다. 영화와 음악은 모두 리뷰의 감정을 분석하여 분류했습니다. 또한 음악, 영화 컨텐트를 누르면 컨텐츠 상세페이지로 넘어가게 되고 이는 모두 Open API를 사용했습니다.   
-<img src="https://images.velog.io/images/tlsrlgkrry/post/9b9cde1b-08c2-4379-96fb-907d5869bebb/%EB%A7%88%EC%A7%80%EB%A7%89.png"  width="200" height="420"/>
+<img src="https://user-images.githubusercontent.com/70425378/150645704-21c32eb5-387e-4fde-9ac8-9bd65cc806ce.png"  width="200" height="420"/>
 
 
 ## 🛠️ 기술스택
