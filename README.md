@@ -89,8 +89,8 @@
     - Oauth
     - JWT
     - OPEN API
-- ML   
-   - keras
+- AI   
+    - keras
     - pytorch
     - tensorflow
     - wandb
