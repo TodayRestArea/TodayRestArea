@@ -194,6 +194,7 @@ class DiaryWrite: UIViewController, UITextViewDelegate{
                     tmp.content = temp
                     self?.navigationController?.pushViewController(tmp, animated: false)
                 }
+                
                 print("success")
             case .requestErr(_):
                 print("requestErr")
@@ -206,6 +207,7 @@ class DiaryWrite: UIViewController, UITextViewDelegate{
             }
         }
     }
+    
     
     @objc  func tapEditBtn(_ sender : Any){
         nowMode = 1
@@ -259,7 +261,7 @@ class DiaryWrite: UIViewController, UITextViewDelegate{
                             case .success(let thisdata):
                                 if let responseValue = thisdata as? ReponseDetailCalendar,
                                    let diaryList = responseValue.result {
-                                
+                                    
                                     self.diary = diaryList
                                     savebutnoanalyzemode(content: self.diary?.contents, weather: self.diary?.weatherId)
                                 }
@@ -291,14 +293,20 @@ class DiaryWrite: UIViewController, UITextViewDelegate{
             temp?.text = "analyze"
             nowMode = 2
         } else if (nowMode == 2){
+            print("cutecutecutecutecutecutecutecute")
+            LoadingService.showLoading()
+            print("cutecutecutecutecutecutecutecute")
             AnalyzeDiary.shared.getMyData(diaryId: "\(self.diaryId)"){ [weak self] response in
                 switch response {
                 case .success(let thisdata):
                     if let responseValue = thisdata as? AnalyzeDiaryResponse,
                        let temp = responseValue.result {
-                        let tmp = EmotionContentVC()
-                        tmp.content = temp
-                        self?.navigationController?.pushViewController(tmp, animated: false)
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            LoadingIndicator.hideLoading()
+                            let tmp = EmotionContentVC()
+                            tmp.content = temp
+                            self?.navigationController?.pushViewController(tmp, animated: false)
+                        }
                     }
                     print("success")
                 case .requestErr(_):

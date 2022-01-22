@@ -8,14 +8,14 @@ class EmotionContentVC: UIViewController, tapMoreBtn {
     var titlestr = String()
     var date = Date()
     var content: contentResponse?
-    var emotions = ["","분노","슬픔","불안","상처","당황","기쁨"]
+    var emotions = ["","분노","슬픔","불안","당황","기쁨"]
     let emotionType: [UIImage] = {
         var tmp =  [UIImage]()
         tmp.append(UIImage(named: "q")!)
         tmp.append(UIImage(named: "angry")!)
         tmp.append(UIImage(named: "sad")!)
-        tmp.append(UIImage(named: "panic")!)
         tmp.append(UIImage(named: "nervous")!)
+        tmp.append(UIImage(named: "panic")!)
         tmp.append(UIImage(named: "happy")!)
         return tmp
     }()
@@ -138,8 +138,8 @@ class EmotionContentVC: UIViewController, tapMoreBtn {
 extension EmotionContentVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == movieCollectionView { return 3 }
-        else { return 3 }
+        if collectionView == movieCollectionView { return (content?.recommendMovies?.count)!}
+        else { return (content?.recommendMusics?.count)!}
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

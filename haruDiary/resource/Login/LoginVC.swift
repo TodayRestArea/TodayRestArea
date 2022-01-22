@@ -67,10 +67,10 @@ class LoginVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIView.animate(withDuration: 0) {
+        UIView.animate(withDuration: 1.5) {
             self.subtitleView.alpha = 1.0
         }
-        UIView.animate(withDuration: 0){
+        UIView.animate(withDuration: 3){
             self.titleView.alpha = 1.0
             self.logo.alpha = 1.0
             self.kakaoBtn.alpha = 1

@@ -13,8 +13,8 @@ class MainVC: UIViewController {
         tmp.append(UIImage(named: "q")!)
         tmp.append(UIImage(named: "angry")!)
         tmp.append(UIImage(named: "sad")!)
-        tmp.append(UIImage(named: "panic")!)
         tmp.append(UIImage(named: "nervous")!)
+        tmp.append(UIImage(named: "panic")!)
         tmp.append(UIImage(named: "happy")!)
         return tmp
     }()
@@ -184,7 +184,7 @@ class MainVC: UIViewController {
                     nextVC.diary = diaryList
                     nextVC.diaryId = selectionIdx
                     nextVC.modalPresentationStyle = .fullScreen
-                    self.navigationController?.pushViewController(nextVC, animated: true)
+                    self.navigationController?.pushViewController(nextVC, animated: false)
                 }
             case .requestErr(_):
                 print("requestErr")

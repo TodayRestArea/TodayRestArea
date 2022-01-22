@@ -48,6 +48,7 @@ class recommendMusicCell: UICollectionViewCell {
         temp.textColor = .black
         temp.font = UIFont(name: "SANGJU-Gotgam", size: 18)
         temp.numberOfLines = 0
+        temp.sizeToFit()
         temp.textAlignment = .center
         return temp;
     }()
@@ -58,6 +59,7 @@ class recommendMusicCell: UICollectionViewCell {
         temp.textColor = .black
         temp.font = UIFont(name: "SANGJU-Gotgam", size: 12)
         temp.numberOfLines = 0
+        temp.sizeToFit()
         temp.textAlignment = .center
         return temp;
     }()
@@ -86,6 +88,7 @@ class recommendMusicCell: UICollectionViewCell {
         self.addSubview(titlestr)
         titlestr.snp.makeConstraints{
             $0.centerX.centerY.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(25)
         }
         self.addSubview(artiststr)
         artiststr.snp.makeConstraints{
