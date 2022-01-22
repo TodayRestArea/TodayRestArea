@@ -12,7 +12,7 @@
   - Rxswift (다음 업데이트 진행시 데이터 비동기화 예정)
 
 ## 🤓 기획 및 설계
-> Font
+> # Font
 
 - 온글잎 보현체
 - NotCliche OTF
@@ -20,7 +20,7 @@
 - JalnanOTF
 - SANGJU-Gotgam
 
->Resource
+> # Resource
 
 
  # Network
