@@ -1,0 +1,12 @@
+
+import Foundation
+
+struct SocialLogin: Codable {
+    let oauthID: String
+
+    enum CodingKeys: String, CodingKey {
+        case oauthID
+    }
+}
+
+
